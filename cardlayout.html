@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ecf0f1;
+            padding: 20px;
+        }
+
+        /* Unique page header - uses ID */
+        #page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .card-title {
+            color: #2c3e50;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+
+        /* Status badge classes */
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .badge-active {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .badge-pending {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+
+        .badge-closed {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page-header">
+        <h1>Project Dashboard</h1>
+        <p>Managing your tasks efficiently</p>
+    </div>
+
+    <div class="container">
+
+        <div class="card" id="project-1">
+            <h2 class="card-title">Website Redesign</h2>
+            <p class="card-text">Complete the new homepage layout and update the color scheme to match brand guidelines.</p>
+            <span class="badge badge-active">Active</span>
+        </div>
+
+        <div class="card" id="project-2">
+            <h2 class="card-title">Mobile App Development</h2>
+            <p class="card-text">Build the authentication system and integrate with the backend API.</p>
+            <span class="badge badge-pending">Pending</span>
+        </div>
+
+        <div class="card" id="project-3">
+            <h2 class="card-title">Database Migration</h2>
+            <p class="card-text">Successfully migrated all user data to the new database infrastructure.</p>
+            <span class="badge badge-closed">Closed</span>
+        </div>
+    </div>
+</body>
+</html>
